@@ -24,18 +24,18 @@ command /settings [<text>] [<player>]: # Player Settings GUI with included menus
       loop 18 times:
         format slot loop-number of player with light gray glass pane named "&7" to be unstealable
       wait 1 tick
-      format slot 2 of player with emerald named "&7" to be unstealable
-      format slot 4 of player with diamond named "&7" to be unstealable
-      format slot 6 of player with iron ingot named "&7" to be unstealable
+      format slot 2 of player with glowing sunflower named "&6Payments Enabled?" with lore "", "&7&oEnables/Disables your ability for", "&7&oplayers to /pay you money.", "", and "&7&oDefault: &a&oEnabled" to be unstealable
+      format slot 4 of player with glowing ender pearl named "&dTeleporting Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&osend you /tpa or /tpahere requests.", "", and "&7&oDefault: &a&oEnabled" to be unstealable
+      format slot 6 of player with glowing book and quill named "&bMessages Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&o/message you.", "&7&oNOTE: Operators can still message you!", "", and "&7&oDefault: &a&oEnabled" to be unstealable
       if the value of placeholder "essentials_is_pay_enabled" of player = "yes":
-        format slot 11 of player with green glass pane named "&7" to be unstealable
+        format slot 11 of player with green glass pane named "&aEnabled" to be unstealable
       else:
-        format slot 11 of player with red glass pane named "&7" to be unstealable
+        format slot 11 of player with red glass pane named "&cDisabled" to be unstealable
       if the value of placeholder "essentials_is_teleport_enabled" of player = "yes":
-        format slot 13 of player with green glass pane named "&7" to be unstealable
+        format slot 13 of player with green glass pane named "&aEnabled" to be unstealable
       else:
-        format slot 13 of player with red glass pane named "&7" to be unstealable
+        format slot 13 of player with red glass pane named "&cDisabled" to be unstealable
       if the value of placeholder "essentials_is_msg_ignore" of player = "yes":
-        format slot 15 of player with green glass pane named "&7" to be unstealable
+        format slot 15 of player with red glass pane named "&cDisabled" to be unstealable
       else:
-        format slot 15 of player with red glass pane named "&7" to be unstealable
+        format slot 15 of player with green glass pane named "&aEnabled" to be unstealable
