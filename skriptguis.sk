@@ -18,15 +18,15 @@ command /settings [<text>] [<player>]: # Player Settings GUI with included menus
       format slot 4 of player with comparator named "&aToggles" to close then run "sudo %player% settings toggles"
     if arg-1 = "toggles":
       wait 1 tick
-      show chest inventory with 2 rows to player
+      show chest inventory with 2 rows named "&aToggles" to player
       wait 1 tick
       format slot 0 of player with light gray glass pane named "&7" to be unstealable
       loop 18 times:
         format slot loop-number of player with light gray glass pane named "&7" to be unstealable
       wait 1 tick
-      format slot 2 of player with glowing sunflower named "&6Payments Enabled?" with lore "", "&7&oEnables/Disables your ability for", "&7&oplayers to /pay you money.", "", and "&7&oDefault: &a&oEnabled" to be unstealable
-      format slot 4 of player with glowing ender pearl named "&dTeleporting Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&osend you /tpa or /tpahere requests.", "", and "&7&oDefault: &a&oEnabled" to be unstealable
-      format slot 6 of player with glowing book and quill named "&bMessages Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&o/message you.", "&7&oNOTE: Operators can still message you!", "", and "&7&oDefault: &a&oEnabled" to be unstealable
+      format slot 2 of player with glowing sunflower named "&6Payments Enabled?" with lore "", "&7&oEnables/Disables your ability for", "&7&oplayers to /pay you money.", "", and "&7&oDefault: &a&oEnabled" to run "paytoggle %player%"
+      format slot 4 of player with glowing ender pearl named "&dTeleporting Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&osend you /tpa or /tpahere requests.", "", and "&7&oDefault: &a&oEnabled" to run "tptoggle %player%"
+      format slot 6 of player with glowing book and quill named "&bMessages Enabled?" with lore "", "&7&oEnables/Disables players ability to", "&7&o/message you.", "&7&oNOTE: Operators can still message you!", "", and "&7&oDefault: &a&oEnabled" to run "msgtoggle %player%"
       if the value of placeholder "essentials_is_pay_enabled" of player = "yes":
         format slot 11 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving payments!" to be unstealable
       else:
@@ -39,3 +39,16 @@ command /settings [<text>] [<player>]: # Player Settings GUI with included menus
         format slot 15 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving messages!" to be unstealable
       else:
         format slot 15 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving messages!" to be unstealable
+on inventory click:
+  if the value of placeholder "essentials_is_pay_enabled" of player = "yes":
+    format slot 11 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving payments!" to be unstealable
+  else:
+    format slot 11 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving payments!" to be unstealable
+  if the value of placeholder "essentials_is_teleport_enabled" of player = "yes":
+    format slot 13 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving /tpa requests!" to be unstealable
+  else:
+    format slot 13 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving /tpa requests!" to be unstealable
+  if the value of placeholder "essentials_is_msg_ignore" of player = "yes":
+    format slot 15 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving messages!" to be unstealable
+  else:
+    format slot 15 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving messages!" to be unstealable
