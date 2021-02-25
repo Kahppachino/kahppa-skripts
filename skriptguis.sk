@@ -36,6 +36,6 @@ command /settings [<text>] [<player>]: # Player Settings GUI with included menus
       else:
         format slot 13 of player with red glass pane named "&7" to be unstealable
       if the value of placeholder "essentials_is_msg_ignore" of player = "yes":
-        format slot 15 of player with red glass pane named "&7" to be unstealable
-      else:
         format slot 15 of player with green glass pane named "&7" to be unstealable
+      else:
+        format slot 15 of player with red glass pane named "&7" to be unstealable
