@@ -1,0 +1,12 @@
+command /sidebartest:
+  trigger:
+    wipe the player's sidebar
+    set name of sidebar of player to "&d&lKAHPPASMP"
+    set score "&7" in sidebar of player to 8
+    set score "&eCoins: &6{_bal}" in sidebar of player to 7
+    set score "pog" in sidebar of player to 6
+    set score "pog" in sidebar of player to 5
+    set score "pog" in sidebar of player to 4
+    set score "pog" in sidebar of player to 3
+    set score "pog" in sidebar of player to 2
+    set score "pog" in sidebar of player to 1

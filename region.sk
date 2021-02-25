@@ -1,0 +1,18 @@
+on placeholderapi placeholder request with the prefix "custom":
+  if the identifier is "region":
+    set {_rgs::%player%} to "%region at player%"
+    if {_rgs::%player%} contains "spawn":
+      set the result to "&bSpawn"
+    else if {_rgs::%player%} contains "devzone":
+      set the result to "&cDevelopment Area"
+    else if {_rgs::%player%} contains "auctions":
+      set the result to "&6Auction House"
+    else if {_rgs::%player%} contains "crates":
+      set the result to "&aCrates &c(COMING SOON)"
+    else if {_rgs::%player%} contains "ranks":
+      set the result to "&dRank Info"
+    else if {_rgs::%player%} contains "royal":
+      set the result to "&6Royal Hangout"
+    else:
+      set {_towny::%player%} to placeholder "townyadvanced_player_location_town_or_wildname"
+      set the result to "%{_towny::%player%}%"

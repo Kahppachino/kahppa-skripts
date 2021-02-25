@@ -1,0 +1,8 @@
+on walking on water:
+  if name of player is "Anniela":
+    damage player by 1 heart
+    play sound "entity.villager.no" at volume 1 and pitch 1 to the player
+on death of player:
+  if name of player is "Anniela":
+    set death message to ""
+    broadcast "Anniela got their cheeks clapped by water"

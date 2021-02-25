@@ -1,0 +1,128 @@
+command /house:
+  description: Places a house at your feet.
+  usage: /house
+  trigger:
+    set block Below player to oak_planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0 to the players
+    wait 0.1 seconds
+    set block 1 below 1 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.6 to the players
+    wait 0.1 seconds
+    set block 1 below 1 northeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.65 to the players
+    wait 0.1 seconds
+    set block 1 below 1 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.7 to the players
+    wait 0.1 seconds
+    set block 1 below 1 southeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.75 to the players
+    wait 0.1 seconds
+    set block 1 below 1 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.80 to the players
+    wait 0.1 seconds
+    set block 1 below 1 southwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.85 to the players
+    wait 0.1 seconds
+    set block 1 below 1 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.9 to the players
+    wait 0.1 seconds
+    set block 1 below 1 northwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 0.95 to the players
+    wait 0.1 seconds
+    set block 2 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 north 1 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 northeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.05 to the players
+    wait 0.1 seconds
+    set block 2 east 1 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.10 to the players
+    wait 0.1 seconds
+    set block 2 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 east 1 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 southeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.15 to the players
+    wait 0.1 seconds
+    set block 2 south 1 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.2 to the players
+    wait 0.1 seconds
+    set block 2 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 south 1 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.25 to the players
+    wait 0.1 seconds
+    set block 2 southwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.3 to the players
+    wait 0.1 seconds
+    set block 2 west 1 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.35 to the players
+    wait 0.1 seconds
+    set block 2 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 west 1 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 northwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block 2 north 1 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+
+    set block Above 2 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 north 1 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 northeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.05 to the players
+    wait 0.1 seconds
+    set block Above 2 east 1 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.10 to the players
+    wait 0.1 seconds
+    set block Above 2 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 east 1 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 southeast of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.15 to the players
+    wait 0.1 seconds
+    set block Above 2 south 1 east of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.2 to the players
+    wait 0.1 seconds
+    set block Above 2 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 south 1 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.25 to the players
+    wait 0.1 seconds
+    set block Above 2 southwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.3 to the players
+    wait 0.1 seconds
+    set block Above 2 west 1 south of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1.35 to the players
+    wait 0.1 seconds
+    set block Above 2 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 west 1 north of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 northwest of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds
+    set block Above 2 north 1 west of the player to oak planks
+    play sound "block.note_block.pling" at volume 1 and pitch 1 to the players
+    wait 0.1 seconds

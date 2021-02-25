@@ -1,0 +1,11 @@
+at 6:00am in "world":
+  if player BPsimp is online:
+    apply strength 1 to the player for 10 minutes
+    apply resistance 1 to the player for 10 minutes
+    apply absorption 1 to the player for 10 minutes
+at 6:00pm in "world":
+  if BPsimp is online:
+    send "&7&oYou start to feel weak..."
+    apply slowness 1 to the player for 10 minutes
+    apply poison 1 to the player for 10 minutes
+    apply blindness 1 to the player for 10 minutes

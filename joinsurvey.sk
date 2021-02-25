@@ -1,0 +1,71 @@
+on join:
+  wait 10 seconds
+  send "&e&lHey Cutie!&r&e We've noticed you haven't done the survey, why don't you give &a/startsurvey&e a go? &c&l<3"
+
+command /startsurvey:
+  trigger:
+    if {surveyanswered::%player%} is set:
+      send "&aNice try, but you can't take the survey again. Sorry, hun!"
+      stop
+
+  # Anti-Revote protection
+    set {survey.answering::%player%} to true
+  # First Question
+    send ""
+    send "Let's get started, shall we?"
+    send ""
+    send "&dWere you able to install the resource pack, and, can you see the guns?"
+    send ""
+    send "&bUse &a/yes &bto vote yes, and &c/no &bto vote no."
+    set {surveyquestion1::%player%} to true
+    loop 
+    if {surveyanswered1::%player%} is true:
+        send ""
+        send "2nd Question:"
+        send ""
+        send "&dIs the community friendly enough that we don't need a chat filter, or strict rules system?"
+        send ""
+        send "&bUse &a/yes &bto vote yes, and &c/no &bto vote no."
+        set {surveyquestion2::%player%} to true
+command /yes:
+  trigger:
+    if {surveyanswer::%player%} is set:
+      send "&cHey, you can't vote again! Get lost!"
+    if {surveyquestion1::%player%} is set:
+      add 1 to {sq1.yes}
+      clear {surveyquestion1::%player%}
+      set {surveyanswered1::%player%} to true
+    if {surveyquestion2::%player%} is set:
+      add 1 to {sq2.yes}
+      clear {surveyquestion2::%player%}
+      set {surveyanswered2::%player%} to true
+command /no:
+  trigger:
+    if {surveyanswer::%player%} is set:
+      send "&cHey, you can't vote again! Get lost!"
+    if {surveyquestion1::%player%} is set:
+      add 1 to {sq1.no}
+      clear {surveyquestion1::%player%}
+      set {surveyanswered1::%player%} to true
+    if {surveyquestion2::%player%} is set:
+      add 1 to {sq2.no}
+      clear {surveyquestion2::%player%}
+      set {surveyanswered2::%player%} to true
+command /printanswers:
+  trigger:
+    send "1st: &a%{sq1.yes}% &c%{sq1.no}%"
+    send "2nd: &a%{sq2.yes}% &c%{sq2.no}%"
+command /allowredo:
+  trigger:
+    clear {surveyanswered::%player%}
+command /clearallanswers:
+  trigger:
+    if {yes::%player%} is set:
+      set {sq1.yes} to 0
+      set {sq1.no} to 0
+      set {sq2.yes} to 0
+      set {sq2.no} to 0
+      clear {yes::%player%}
+      stop
+    send "I don't know why the fuck you're doing this, but if you insist on &lpurging ALL responses&r, then do the command again."
+    set {yes::%player%} to true

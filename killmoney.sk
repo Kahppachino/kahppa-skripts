@@ -1,0 +1,25 @@
+options:
+	check-cmd: /stats
+	reg-amt: 50
+	vip-amt: 2
+	reg-cmd: eco give %attacker% 50
+	vip-cmd: eco give %attacker% 50
+on death:
+	victim is a player
+	attacker is a player
+	attacker has permission "kills.premium":
+		execute console command "{@vip-cmd}"
+	else:
+		execute console command "{@reg-cmd}"
+	add 1 to {PvPStats.%attacker%.kills}
+	add 1 to {PvPStats.%victim%.deaths}
+on first join:
+	set {PvPStats.%player%.kills} to 0
+	set {PvPStats.%player%.deaths} to 0
+on command "{@check-cmd}":
+	send "&a[----------]-[ &9Player Stats &a]-[----------]" to player
+	send "&r" to player
+	send "&cKills:&7 %{PvPStats.%player%.kills}%" to player
+	send "&cDeaths:&7 %{PvPStats.%player%.deaths}%" to player
+	send "&r" to player
+	send "&a[----------]-[ &9Player Stats &a]-[----------]" to player

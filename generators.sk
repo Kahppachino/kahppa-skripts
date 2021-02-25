@@ -1,0 +1,25 @@
+#   __  __   ______   __  __   ______  ______  ______     #
+#  /\ \/ /  /\  __ \ /\ \_\ \ /\  == \/\  == \/\  __ \    #
+#  \ \  _"-.\ \  __ \\ \  __ \\ \  _-/\ \  _-/\ \  __ \   #
+#   \ \_\ \_\\ \_\ \_\\ \_\ \_\\ \_\   \ \_\   \ \_\ \_\  #
+#    \/_/\/_/ \/_/\/_/ \/_/\/_/ \/_/    \/_/    \/_/\/_/  #
+#       Gens Skript by Kahppa, do not distribute!         #
+command /sidebartest:
+  trigger:
+    wipe player's sidebar
+    set name of sidebar of player to "&b&lZEIGEFPS"
+    set score "&7&7&7" in sidebar of player to 7
+    set score "&eCoins: &6%{gens.%player%.coins}%" in sidebar of player to 6
+    set score "&aZems: &2%{gens.%player%.zems}%" in sidebar of player to 5
+    set score "&7&7" in sidebar of player to 4
+    set score "&dKills: &5%{PVPStats.%player%.kills}%" in sidebar of player to 3
+    set score "&bDeaths: &3%{PVPStats.%player%.deaths}%" in sidebar of player to 2
+    set score "&7" in sidebar of player to 1
+    set score "&f&lfps.khpa.cf" in sidebar of player to 0
+on place of iron block:
+  if name of event-item is "&bGen":
+    while event-block is iron block:
+      wait 1 second
+      drop 1 emerald named "&aZem" with lore "&7&oA physical Zem. (/vzem)" 0.5 above location of event-block without velocity
+  else:
+    stop

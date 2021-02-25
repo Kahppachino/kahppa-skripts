@@ -1,0 +1,49 @@
+#   __  __   ______   __  __   ______  ______  ______     #
+#  /\ \/ /  /\  __ \ /\ \_\ \ /\  == \/\  == \/\  __ \    #
+#  \ \  _"-.\ \  __ \\ \  __ \\ \  _-/\ \  _-/\ \  __ \   #
+#   \ \_\ \_\\ \_\ \_\\ \_\ \_\\ \_\   \ \_\   \ \_\ \_\  #
+#    \/_/\/_/ \/_/\/_/ \/_/\/_/ \/_/    \/_/    \/_/\/_/  #
+#     Lockpick Skript by Kahppa, do not distribute!       #
+on rightclick on a iron door or iron trapdoor:
+  set {_block} to event-block
+  if player is holding a tripwire hook:
+    if name of event-item is "§3Lockpick":
+      # Immobilize the player.
+      apply slowness 127 to the player for 30 seconds
+      apply mining fatigue 3 to the player for 30 seconds
+      apply blindness 1 to the player for 31 seconds
+      apply jump boost 129 to the player for 30 seconds
+      remove 1 tripwire hook from player's held item
+      cancel the event
+      send "§7§oYou begin to pick the door's lock. (0%%)" to the player
+      make the player swing their main hand
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.attack_iron_door" to the player
+      show block break stage 0 at {_block} to all players
+      send "§7§oYou pick the door's lock. (17%%)" to the player
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.attack_iron_door" to the player
+      show block break stage 1 at {_block} to all players
+      send "§7§oYou pick the door's lock. (33%%)" to the player
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.attack_iron_door" to the player
+      show block break stage 3 at {_block} to all players
+      send "§7§oYou pick the door's lock. (49%%)" to the player
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.attack_iron_door" to the player
+      show block break stage 5 at {_block} to all players
+      send "§7§oYou pick the door's lock. (65%%)" to the player
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.attack_iron_door" to the player
+      show block break stage 7 at {_block} to all players
+      send "§7§oYou pick the door's lock. (81%%)" to the player
+      wait 5 seconds
+      make the player swing their main hand
+      play sound "entity.zombie.break_wooden_door" to the player
+      set event-block to air
+      send "§7§oYou bust open the door. (100%%)" to the player

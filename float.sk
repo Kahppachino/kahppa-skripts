@@ -1,0 +1,15 @@
+command /float <player>:
+  description: Floats the player for lore
+  usage: /float [player]
+  executable by: players
+  trigger:
+    apply levitation 3 to player for 2 seconds
+    apply glowing 1 to player for 7 seconds
+    wait 2 seconds
+    set block Below player to barrier
+    wait 5 seconds
+    set block Below player to air
+    wait 0.45 seconds
+    set block Below player to water
+    wait 0.1 seconds
+    set block -0 Above player to air

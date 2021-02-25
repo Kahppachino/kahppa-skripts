@@ -1,0 +1,3 @@
+on death of player:
+  if name of player is "Anniela":
+    broadcast "Anniela tried to swim"
