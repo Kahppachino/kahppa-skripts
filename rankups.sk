@@ -10,12 +10,3 @@ command /ranks:
     format slot 21 of player with lime glass pane named "heck" to close then run "say test"
     format slot 22 of player with lime glass pane named "heck" to close then run "say test"
     format slot 23 of player with lime glass pane named "heck" to close then run "say test"
-
-on server list ping:
-  set {_players} to a random number from 151 to 168
-  set the fake amount of online players to {_players}
-  set the fake max player count to 200
-  clear the hover list
-  add "&bWelcome to Zeige." to the hover list
-  add "" to the hover list # A blank line
-  add "&aEnjoy your stay! &c<3" to the hover list
