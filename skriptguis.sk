@@ -39,16 +39,3 @@ command /settings [<text>] [<player>]: # Player Settings GUI with included menus
         format slot 15 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving messages!" to be unstealable
       else:
         format slot 15 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving messages!" to be unstealable
-on inventory click: # Detects when a player clicks one of the above toggles, and attempts to update the glass colours.
-  if the value of placeholder "essentials_is_pay_enabled" of player = "yes":
-    format slot 11 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving payments!" to be unstealable
-  else:
-    format slot 11 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving payments!" to be unstealable
-  if the value of placeholder "essentials_is_teleport_enabled" of player = "yes":
-    format slot 13 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving /tpa requests!" to be unstealable
-  else:
-    format slot 13 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving /tpa requests!" to be unstealable
-  if the value of placeholder "essentials_is_msg_ignore" of player = "yes":
-    format slot 15 of player with red glass pane named "&cDisabled" with lore "", and "&7&oYou're not receiving messages!" to be unstealable
-  else:
-    format slot 15 of player with green glass pane named "&aEnabled" with lore "", and "&7&oYou're receiving messages!" to be unstealable
