@@ -1,9 +1,10 @@
 on first join:
   send title "&f✪ &aWelcome to KahppaSMP! &f✪" with subtitle "&2Thanks for joining! <3"
   play sound "entity.player.levelup" with pitch 0 to the player
-  play sound "entity.player.levelup"
 on join:
   if player has permission "godrank.msg":
+    if player is a op:
+      stop
     play sound "entity.ender_dragon.growl" at volume 50 to all players
     send title "&f✪ &6Welcome back! &f✪" with subtitle "&eHappy to see you again! <3"
     send message center "&6>>> [GOD] %player% has joined! <<<" to all players
