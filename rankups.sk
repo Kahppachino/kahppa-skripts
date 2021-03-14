@@ -47,7 +47,7 @@ command /ranks [<number>]:
       else:
         send "&cYou don't have enough money to afford this!"
     if arg-1 = 6: # King OR Queen
-      show hopper named "&dKing or Queen?" to player
+      show hopper inventory named "&dKing or Queen?" to player
       wait 1 tick
       format slot 0 with black stained glass named "" to do nothing
       format slot 2 with black stained glass named "" to do nothing
