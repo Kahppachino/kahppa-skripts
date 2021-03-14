@@ -49,11 +49,11 @@ command /ranks [<number>]:
     if arg-1 = 6: # King OR Queen
       show hopper inventory named "&dKing or Queen?" to player
       wait 1 tick
-      format slot 0 with black stained glass named "" to do nothing
-      format slot 2 with black stained glass named "" to do nothing
-      format slot 4 with black stained glass named "" to do nothing
-      format slot 1 with light blue stained glass named "&dKing" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 8"]
-      format slot 3 with pink stained glass named "&dQueen" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 9"]
+      format slot 0 of player with black stained glass named "" to do nothing
+      format slot 2 of player with black stained glass named "" to do nothing
+      format slot 4 of player with black stained glass named "" to do nothing
+      format slot 1 of player with light blue stained glass named "&dKing" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 8"]
+      format slot 3 of player with pink stained glass named "&dQueen" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 9"]
       if balance of player >= 1500000:
       execute console command "lp user %player% parent set "
       execute console command "eco take %player% 10000"
