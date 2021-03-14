@@ -17,37 +17,36 @@ command /ranks [<number>]:
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
     if arg-1 = 2: # Apprentice
       if balance of player >= 50000:
         execute console command "lp user %player% parent set apprentice"
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
     if arg-1 = 3: # Master
       if balance of player >= 100000:
         execute console command "lp user %player% parent set master"
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
     if arg-1 = 4: # Leader
       if balance of player >= 250000:
         execute console command "lp user %player% parent set leader"
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
     if arg-1 = 5: # Prince
       if balance of player >= 500000:
         execute console command "lp user %player% parent set prince"
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
     if arg-1 = 6: # King OR Queen
-
       show hopper named "&dKing or Queen?" to player
       wait 1 tick
       format slot 0 with black stained glass named "" to do nothing
@@ -60,4 +59,4 @@ command /ranks [<number>]:
         execute console command "eco take %player% 10000"
         send "&aYou successfully ranked up to RANK"
       else:
-        send "&cYou don't have enough money to afford this!
+        send "&cYou don't have enough money to afford this!"
