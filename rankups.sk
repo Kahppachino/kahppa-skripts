@@ -11,8 +11,45 @@ command /ranks [<number>]:
       format slot 21 of player with yellow stained glass pane named "&ePrince" with lore "", "&e[Prince]&7 prefix", "&7- +16 Claim Chunks &8(64 total)", "&7- /party XPSHARE equal", "   &8&oGet mcMMO XP while near other", "   &8party members", "&7- Direct access to the Auction House", "&7with /warp auctions.", "", and "&fPrice: &6$750,000" to close then run [make player execute command "ranks 5"]
       format slot 22 of player with magenta stained glass pane named "&dKing" with lore "", "&d[King]&7 prefix", "&7- /hat", "&7- /nick", "&7- /hat", and "&7+16 Claim Chunks &8(80 total)", "", and "&fPrice: &6$1,500,000" to close then run [make player execute command "ranks 6"]
       format slot 23 of player with orange stained glass pane named "&6&k???" with lore "", "&6&k[???]&7&k prefix", and "&7&oComing soon..." to close
-    if arg-1 = 1:
+    if arg-1 = 1: # Survivalist
       if balance of player >= 10000:
-        send "YES"
+        execute console command "lp user %player% parent set survivalist"
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
       else:
-        send "NO"
+        send "&cYou don't have enough money to afford this!
+    if arg-1 = 2: # Apprentice
+      if balance of player >= 50000:
+        execute console command "lp user %player% parent set apprentice"
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
+      else:
+        send "&cYou don't have enough money to afford this!
+    if arg-1 = 3: # Master
+      if balance of player >= 100000:
+        execute console command "lp user %player% parent set master"
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
+      else:
+        send "&cYou don't have enough money to afford this!
+    if arg-1 = 4: # Leader
+      if balance of player >= 250000:
+        execute console command "lp user %player% parent set leader"
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
+      else:
+        send "&cYou don't have enough money to afford this!
+    if arg-1 = 5: # Prince
+      if balance of player >= 500000:
+        execute console command "lp user %player% parent set prince"
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
+      else:
+        send "&cYou don't have enough money to afford this!
+    if arg-1 = 6: # King OR Queen
+      if balance of player >= 1500000:
+        execute console command "lp user %player% parent set "
+        execute console command "eco take %player% 10000"
+        send "&aYou successfully ranked up to RANK"
+      else:
+        send "&cYou don't have enough money to afford this!
