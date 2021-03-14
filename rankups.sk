@@ -54,9 +54,9 @@ command /ranks [<number>]:
       format slot 4 with black stained glass named "" to do nothing
       format slot 1 with light blue stained glass named "&dKing" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 8"]
       format slot 3 with pink stained glass named "&dQueen" with lore "&7&oNote this doesn't have any", and "&7&oeffect on the permissions you have." to run [make player execute command "ranks 9"]
-        if balance of player >= 1500000:
-        execute console command "lp user %player% parent set "
-        execute console command "eco take %player% 10000"
-        send "&aYou successfully ranked up to RANK"
+      if balance of player >= 1500000:
+      execute console command "lp user %player% parent set "
+      execute console command "eco take %player% 10000"
+      send "&aYou successfully ranked up to RANK"
       else:
         send "&cYou don't have enough money to afford this!"
