@@ -1,4 +1,4 @@
-command /ranks <number>:
+command /ranks [<number>]:
   trigger:
     if arg-1 isn't set:
       open chest with 4 rows named "&aRankup time?" to player
