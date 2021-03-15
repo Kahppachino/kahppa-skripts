@@ -14,5 +14,4 @@ on placeholderapi placeholder request with the prefix "custom":
     else if {_rgs::%player%} contains "royal":
       set the result to "&6Royal Hangout"
     else:
-      set {_towny::%player%} to placeholder "townyadvanced_player_location_town_or_wildname"
-      set the result to "%{_towny::%player%}%"
+      set the result to "&2%placeholder ""townyadvanced_player_location_formattedtown_or_wildname"" from player%"
