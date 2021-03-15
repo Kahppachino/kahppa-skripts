@@ -1,0 +1,4 @@
+command /dupe:
+  trigger:
+    kick the player due to "&aNice one."
+    broadcast "&a&l%player% tried to /dupe, LMAO what an idiot!"
