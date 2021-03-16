@@ -15,5 +15,7 @@ command /adminmode [<text>]:
 command /nerd:
   trigger:
     open chest with 6 rows named "&dNerdy Stats" to player
+    while 
+    format slot 0 of player with black stained glass pane named "&7" to be unstealable
     loop 54 times:
       format slot loop-number of player with black stained glass pane named "&7" to be unstealable
