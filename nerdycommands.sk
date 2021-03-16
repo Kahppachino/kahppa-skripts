@@ -11,3 +11,9 @@ command /adminmode [<text>]:
         broadcast "&a%player% is no longer in Admin Mode. Their inventory was just wiped, and have returned to being a normal player."
         clear the player's inventory
         set the player's gamemode to survival
+
+command /nerd:
+  trigger:
+    open chest with 6 rows named "&dNerdy Stats" to player
+    loop 54 times:
+      format slot loop-number with black stained glass pane named "&7" to be unstealable
