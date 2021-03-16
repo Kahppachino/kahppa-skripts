@@ -16,4 +16,4 @@ command /nerd:
   trigger:
     open chest with 6 rows named "&dNerdy Stats" to player
     loop 54 times:
-      format slot loop-number with black stained glass pane named "&7" to be unstealable
+      format slot loop-number of player with black stained glass pane named "&7" to be unstealable
