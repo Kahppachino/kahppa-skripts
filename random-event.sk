@@ -11,6 +11,25 @@
 command /randomevent:
   trigger:
     if player has permission "kahppa.randomevent":
-
+      set {_randomevent} to a random number between 1 and 7
+      if {_randomevent} = 1:
+        execute console command "xprate 2 true"
+        wait 1 hour
+        execute console command "xprate reset"
+      if {_randomevent} = 2:
+        execute console command "jobs moneyboost all 1hour 10"
+      if {_randomevent} = 3:
+        execute console command "townyadmin toggle war"
+      if {_randomevent} = 4:
+        execute console command "townyadmin depositall 10"
+      if {_randomevent} = 5:
+        loop all players:
+          add loop-player to {_random::*}
+        loop 50 times:
+          set {_player} to random element out of {_random::*}
+          send "The random player: %{_player}%"
+          wait loop-number ticks
+      if {_randomevent} = 6:
+      if {_randomevent} = 7:
     else:
       send "&cThis command is for Kahppa only, stop snooping. :)"
