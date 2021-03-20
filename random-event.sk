@@ -11,6 +11,6 @@
 command /randomevent:
   trigger:
     if player has permission "kahppa.randomevent":
-      send "YES"
+
     else:
-      send "NO"
+      send "&cThis command is for Kahppa only, stop snooping. :)"
