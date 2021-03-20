@@ -7,3 +7,10 @@
   # Random Rankup (Will be done manually)
   # Random amount of money for all (100-10000)
   # I'll probably add more here as I go, lol.
+
+command /randomevent:
+  trigger:
+    if player has permission "kahppa.randomevent":
+      send "YES"
+    else:
+      send "NO"
