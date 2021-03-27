@@ -33,3 +33,12 @@ command /randomevent:
       if {_randomevent} = 7:
     else:
       send "&cThis command is for Kahppa only, stop snooping. :)"
+command /heckles:
+  trigger:
+    loop all players:
+      add loop-player to {_random::*}
+    loop 50 times:
+      wait 5 ticks
+      set {_player} to random element out of {_random::*}
+      send title "&a%{_player}%" with subtitle "&2Picking random player..." to all players with fade in 0 second and fade out 0 second
+      play sound "ui.button.click" at pitch 2 to all players
