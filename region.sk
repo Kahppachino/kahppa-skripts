@@ -16,7 +16,7 @@ on placeholderapi placeholder request with the prefix "custom":
     else if {_rgs::%player%} contains "mines":
       set the result to "&dDeep Mines"
     else:
-      if player is in world "world", or "SkyblockHub":
+      if player is in world "world":
         set the result to "&2%placeholder ""townyadvanced_player_location_formattedtown_or_wildname"" from player%"
       else if player is in world "world_nether":
         set the result to "&4Nether Wilderness"
