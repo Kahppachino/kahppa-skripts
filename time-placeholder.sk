@@ -1,0 +1,10 @@
+on placeholderapi placeholder request with prefix "custom":
+  if the identifier is "time":
+    if player is in world "SkyblockHub":
+      set the result to "&7&k00&r&7:&r&7&k00&r &k&7??"
+    else if player is in world "world_nether":
+      set the result to "&7&k00&r&7:&r&7&k00&r &k&7??"
+    else if player is in world "world_the_end":
+      set the result to "&7&k00&r&7:&r&7&k00&r &k&7??"
+    else:
+      set the result to "placeholder ""%player_world_time_12%"""
