@@ -13,5 +13,12 @@ on placeholderapi placeholder request with the prefix "custom":
       set the result to "&dRank Info"
     else if {_rgs::%player%} contains "royal":
       set the result to "&6Royal Hangout"
+    else if {_rgs::%player%} contains "mines":
+      set the result to "&dDeep Mines"
     else:
-      set the result to "&2%placeholder ""townyadvanced_player_location_formattedtown_or_wildname"" from player%"
+      if player is in world "world", or "SkyblockHub":
+        set the result to "&2%placeholder ""townyadvanced_player_location_formattedtown_or_wildname"" from player%"
+      else if player is in world "world_nether":
+        set the result to "&4Nether Wilderness"
+      else if player is in world "world_the_end":
+        set the result to "&dThe End"
