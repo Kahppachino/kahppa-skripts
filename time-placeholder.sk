@@ -7,4 +7,4 @@ on placeholderapi placeholder request with prefix "custom":
     else if player is in world "world_the_end":
       set the result to "&7&k00&r&7:&r&7&k00&r &k&7??"
     else:
-      set the result to "placeholder ""%player_world_time_12%"""
+      set the result to "%placeholder ""player_world_time_12"" from player%"
