@@ -1,2 +1,6 @@
-# kahppa-skripts
-Just a collection of Skripts I've written! &lt;3
+Kahppa's Skript Dump
+=====================
+
+Welcome to my personal deposit of Skripts! Most of these were made for KahppaSMP but some of them are just personal projects.
+
+### Explanations
