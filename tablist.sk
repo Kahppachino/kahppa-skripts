@@ -1,0 +1,28 @@
+command /tabon:
+  trigger:
+    enable the array tablist
+command /addtab:
+  trigger:
+    set the icon of tab 1, 1 for player to gray skin
+    set the name of tab 1, 1 for player to "     &d&lPlayers (%placeholder ""server_online""%)"
+    set the name of tab 2, 1 for player to "    &d&lServer Info"
+    loop all players:
+      set {_tabplayer} to loop-player
+      set the name of tab 1, {_tabplayernum}+2 for player to "%{_tabplayer}%"
+      set the icon of tab 1, {_tabplayernum}+2 for player to loop-player's skin
+      add 1 to {_tabplayernum}
+    :
+
+command /taboff:
+  trigger:
+    disable the array tablist
+command /colorful_tablist:
+  trigger:
+    enable array tablist
+    set {_skins::*} to all full color skins
+    set {_i} to 1
+    loop integers from 1 to 4:
+      loop integers from 1 to 20:
+        set icon of tab loop-value-1, loop-value-2 to {_skins::%{_i}%}
+        add {_skins::%{_i}%} to {_skins::*}
+        add 1 to {_i}
