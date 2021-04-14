@@ -15,7 +15,18 @@ command /adminmode [<text>]:
 command /nerd:
   trigger:
     open chest with 6 rows named "&dNerdy Stats" to player
-    while 
+    while
     format slot 0 of player with black stained glass pane named "&7" to be unstealable
     loop 54 times:
       format slot loop-number of player with black stained glass pane named "&7" to be unstealable
+
+command /ghostnpc:
+  trigger:
+    send "&2Ghost: &7&oHello!" to player
+    play sound "entity.villager.yes" to player
+    wait 2 seconds
+    send "&2Ghost: &7&oI'm just your friendly neighbourhood NPC... I think..." to player
+    play sound "entity.villager.yes" to player
+    wait 2 seconds
+    send "&2Ghost: &7&oDon't tell Kahppa about me!" to player
+    play sound "entity.villager.yes" to player
