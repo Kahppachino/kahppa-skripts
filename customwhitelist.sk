@@ -1,0 +1,43 @@
+command /whitelist [<string>]:
+  trigger:
+    if arg-1 isn't set:
+      send message center "&aCustom whitelist by &a&lKahppa&r&a!" to player
+      send "" to player
+      send message center "&7Usage:" to player
+      send "&b/whitelist &3<string>"
+      send "            &7├ &3semi-on"
+      send "            &7│ &7└ &7Enables rank-only mode."
+      send "            &7├ &3semi-off"
+      send "            &7│ &7└ &7Disables rank-only mode."
+      send "            &7├ &3total-on"
+      send "            &7│ &7└ &7Enables total lockdown mode."
+      send "            &7├ &3total-off"
+      send "            &7│ &7└ &7Disables total lockdown mode."
+    if arg-1 contains "semi-on":
+      send message center "&aEnabled the filtered whitelist!" to player
+      set {whitelist::semi} to true
+    if arg-1 contains "semi-off":
+      send message center "&aDisabled the filtered whitelist!" to player
+      set {whitelist::semi} to false
+    if arg-1 contains "total-on":
+      send message center "&cEnabled the global whitelist." to player
+      set {whitelist::total} to true
+    if arg-1 contains "total-off":
+      send message center "&cDisabled the global whitelist." to player
+      set {whitelist::total} to false
+on connect:
+  if name of player is "BPsimp":
+    stop
+  else if {whitelist::semi} is true:
+    if player has permission "kahppa.semiwhitelist":
+      stop
+    else:
+      kick the player due to "&7&cOh no!%nl%%nl%&7We were unable to connect you to KahppaSMP,%nl%&7as it is only avalible to &aSurvivalists&7 and up%nl%%nl%Don't panic! There's most likely a reason for this%nl%on the discord!%nl%&9&nhttps://discord.gg/TPqwWaZu6P"
+  else if {whitelist::total} is true:
+    kick the player due to "&7&cOh no!%nl%%nl%&7We were unable to connect you to KahppaSMP,%nl%&7as it is totally whitelisted.%nl%%nl%Don't panic! There's most likely a reason for this%nl%on the discord!%nl%&9&nhttps://discord.gg/TPqwWaZu6P"
+# PLAN OF ACTION:
+command /kicktest:
+  trigger:
+    kick the player due to "&7&cOh no!%nl%%nl%&7We were unable to connect you to KahppaSMP,%nl%&7as it is only avalible to &aSurvivalist's&7 and up%nl%%nl%Don't panic! There's most likely a reason for this%nl%on the discord!%nl%&9&nhttps://discord.gg/TPqwWaZu6P"
+# PLAN OF ACTION:
+# If the player joins and semi-on's varible is set to true, if they dont match the specified groups, they get kicked.
