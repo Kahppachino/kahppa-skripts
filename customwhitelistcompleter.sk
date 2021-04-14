@@ -1,0 +1,6 @@
+on tab completer for "/whitelist":
+#In this line we need to put the command.
+    set {_completers::*} to "semi-on", "semi-off", "total-on" and "total-off"
+    #In this line we need to put the arguments to complete.
+    loop {_completers::*}:
+        add loop-value to completions
