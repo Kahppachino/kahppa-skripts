@@ -1,0 +1,26 @@
+on join:
+  if name of player is "BPsimp":
+    broadcast "&e%player% &ejoined."
+    wait 1 tick
+    loop 250 times:
+      send "" to player
+    send message center "&6◎______▁▂▃▄▅▆▇█▇▆▅▄▃▂▁______◎" to player
+    send message center "" to player
+    send message center "&dWelcome back, %player%!" to player
+    send message center "" to player
+    send message center ""
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
+    send message center "" to player
