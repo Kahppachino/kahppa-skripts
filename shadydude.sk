@@ -1,0 +1,24 @@
+command /shadydude [<string>]:
+  trigger:
+    if arg-1 contains "kahppaisverypog":
+      send "&7&o..."
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 3 seconds
+      send "&7&oWhy are you here?"
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 1 seconds
+      send "&7&oHow did you even find me?"
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 1 seconds
+      send "&7&o..."
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 3 seconds
+      send "&7&oLook, I'll make you a deal. I'll sell you some special items, but, you need to keep quiet about this whole ordeal."
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 4 seconds
+      send "&7&o*sighs*"
+      play sound "entity.villager.hurt" with pitch 0 to the player
+      wait 1 seconds
+      # OPEN THE GUI HERE DUMBFUCK
+      send "&aCommand unfinished. GUI will open here."
+      play sound "entity.player.levelup" with pitch 0 to the player
