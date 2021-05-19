@@ -1,0 +1,5 @@
+command /pingwars:
+  trigger:
+    loop all players:
+      set {_playerping::%player%} to loop-player's ping
+  
