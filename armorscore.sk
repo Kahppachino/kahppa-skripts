@@ -1,0 +1,50 @@
+command /armorscore:
+
+
+
+
+
+
+# Score Listing & Math
+  # Armor Types:
+    # Leather: IGNORED
+    # Chain: +5
+    # Iron: +15
+    # Gold: +10
+    # Diamond: +20
+    # Netherite: +25
+
+  # Enchants:
+  Aqua Affinity: 
+  Bane of Arthropods:
+  Blast Protection:
+  Channeling:
+  Depth Strider:
+  Efficiency:
+  Feather Falling:
+  Fire Aspect:
+  Fire Protection:
+  Flame:
+  Fortune:
+  Frost Walker:
+  Impaling:
+  Infinity:
+  Knockback:
+  Looting:
+  Loyalty:
+  Mending:
+  Multishot:
+  Piercing:
+  Power:
+  Projectile Protection:
+  Protection:
+  Punch:
+  Quick Charge:
+  Respiration:
+  Riptide:
+  Sharpness:
+  Silk Touch:
+  Smite:
+  Sweeping Edge:
+  Thorns:
+  Unbreaking:
