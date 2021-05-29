@@ -1,0 +1,6 @@
+# "Indian Code" - TheOtherPal
+# "hard core core" - Kahppa
+# do not distribute and shit <3
+
+function addRandomItem(item: text):
+  add "%{_item}%" to {randomitems::*}
