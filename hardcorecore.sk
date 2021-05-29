@@ -4,3 +4,7 @@
 
 function addRandomItem(item: text):
   add "%{_item}%" to {randomitems::*}
+
+on death of player:
+  send title "&c%player% has died." with subtitle "<##fb6d6d>%death message%." to all players
+  set death message to ""
