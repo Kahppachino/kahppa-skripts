@@ -1,10 +1,26 @@
 # "Indian Code" - TheOtherPal
 # "hard core core" - Kahppa
+# "human" - EastDegree
 # do not distribute and shit <3
+
+# set daylight cycle and weather cycle to true you fucking idiot
 
 function addRandomItem(item: text):
   add "%{_item}%" to {randomitems::*}
-
 on death of player:
-  send title "&c%player% has died." with subtitle "<##fb6d6d>%death message%." to all players
+  send title "&c%player% has died." with subtitle "<##fb6d6d>%death message%." to all players for 10 seconds
+  play sound "entity.wither.death" to all players
+  set gamemode of event-player to spectator
   set death message to ""
+  wait 10 seconds
+  send title "&cPicking revival cost..."
+  wait 3 seconds
+command /randtest:
+  trigger:
+    loop 30 times:
+      set {_poggers} to a random item out of all items
+      if {_poggers} is a block:
+        if {_poggers} contains "ender portal block", "plant", "farmland", "coral", "void air", "cave air", "egg", "nether star", "end portal frame", "bedrock", "barrier", "command", "air", "structure", "wall sign", "beacon", or "spawner":
+          stop
+        send title "&cPicking revival cost..." with subtitle "%{_poggers}%" to all players with fade in 0 seconds and fade out 1 second
+        wait 2 seconds
