@@ -12,15 +12,70 @@ on death of player:
   play sound "entity.wither.death" to all players
   set gamemode of event-player to spectator
   set death message to ""
+  if {slot3taken} is true:
+    wait 3 seconds
+    play sound "entity.evoker.cast_spell" at pitch 0 to all players
+    send title "&cOut of slots!" with subtitle "&c%player% is now dead permanantly."
+    stop
   wait 10 seconds
   send title "&cPicking revival cost..."
   wait 3 seconds
-command /randtest:
+  loop 30 times:
+    set {tester} to a random item out of {filteredblocks::*}
+    send title "&cPicking revival cost..." with subtitle "&a%{tester}%" to all players with fade in 0 seconds and fade out 1 second
+    play sound "block.dispenser.fail" at pitch 2 to all players
+    wait 5 ticks
+  send title "&aRevival cost:" with subtitle "&a%{tester}%" to all players with fade in 0 seconds and fade out 1 second
+  play sound "entity.player.levelup" to all players
+  if {slot1taken} is false:
+    create a npc named "%player%" with type player at location -11.5, 109, -8.5 in world "world"
+    set {deadnpc1} to last created npc
+    set {deadblock::%player%} to {tester}
+    set {slot1name} to player's name
+    set {slot1taken} to true
+  else if {slot2taken} is false:
+    create a npc named "%player%" with type player at location -15.5, 109, -8.5 in world "world"
+    set {deadblock::%player%} to {tester}
+    set {slot2name} to player's name
+    set {slot2taken} to true
+  else if {slot3taken} is false:
+    create a npc named "%player%" with type player at location -19.5, 109, -8.5 in world "world"
+    set {deadblock::%player%} to {tester}
+    set {slot3name} to player's name
+    set {slot3taken} to true
+command /setblocks:
   trigger:
-    loop 30 times:
-      set {_poggers} to a random item out of all items
-      if {_poggers} is a block:
-        if {_poggers} contains "ender portal block", "plant", "farmland", "coral", "void air", "cave air", "egg", "nether star", "end portal frame", "bedrock", "barrier", "command", "air", "structure", "wall sign", "beacon", or "spawner":
-          stop
-        send title "&cPicking revival cost..." with subtitle "%{_poggers}%" to all players with fade in 0 seconds and fade out 1 second
-        wait 2 seconds
+    loop all items:
+      if loop-item is a block:
+        add loop-item to {allblocks::*}
+    send "&aDone!"
+#on right click:
+#  if event-itemtype is {deadblock::*}:
+#    if event-block is end portal frame:
+#      set {slot1name} to survival
+#    else if event-block is iron block:
+#      if block below 1 south event-block is end portal frame:
+#        set {slot1name} to survival
+command /goodbyeair:
+  trigger:
+    loop {allblocks::*}:
+      write "%loop-value%" at line loop-number
+    send "&aDone!"
+command /clearvarsdss:
+  trigger:
+    clear {allblocks::*}
+    clear {allitems::*}
+    clear {tester}
+    clear {filteredblocks::*}
+command /cleardeadblocks:
+  trigger:
+    clear {deadblock::*}
+command /cititest:
+  trigger:
+    create a npc named "BPsimp" with type player at location -11.5, 109, 9.5 in world "world"
+command /clearslots:
+  trigger:
+    set {slot1taken} to false
+    set {slot2taken} to false
+    set {slot3taken} to false
+    clear {deadnpc1}

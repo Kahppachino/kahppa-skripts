@@ -1,0 +1,2 @@
+on connect:
+  kick the player due to "&7Hey! %newline% &7PK's ip is &cno longer in service. %newline% &7Read more here: %newline% &9https://hastebin.com/puqubegovi.md"
